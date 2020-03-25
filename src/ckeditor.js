@@ -29,6 +29,8 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
+import './styles.css';
+
 export default class InlineEditor extends InlineEditorBase {}
 
 // Plugins to include in the build.
@@ -94,6 +96,26 @@ InlineEditor.defaultConfig = {
 			'tableColumn',
 			'tableRow',
 			'mergeTableCells'
+		]
+	},
+	mediaEmbed: {
+		extraProviders: [
+			{
+				name: 'vkontakte',
+				url: /^vk.com\/video_ext\.php\?(.+)/,
+				html: match => {
+					const id = match[ 1 ];
+
+					return (
+						'<div style="position: relative; padding-bottom: 100%; height: 0; padding-bottom: 56.2493%;">' +
+						`<iframe src="https://vk.com/video_ext.php?${ id }" ` +
+						'style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;" ' +
+						'frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>' +
+						'</iframe>' +
+						'</div>'
+					);
+				}
+			},
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.

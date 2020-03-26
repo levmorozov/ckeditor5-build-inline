@@ -28,22 +28,25 @@ Preserve the relative scale, though. */
 /* Set the styles for "Heading 1". */
 .ck-content h2,
 .ck-heading-dropdown .ck-heading_heading1 .ck-button__label {
-	font-size: 2.18em;
+	font-size: 21px;
 	font-weight: normal;
+	color: #222;
+	font-family: 'PT Serif', serif;
 }
 
 .ck-content h2 {
-	line-height: 1.37em;
-	padding-top: .342em;
-	margin-bottom: .142em;
+	font-size: 21px;
+	font-weight: normal;
+	color: #222;
+	font-family: 'PT Serif', serif;
 }
 
 /* Set the styles for "Heading 2". */
 .ck-content h3,
 .ck-heading-dropdown .ck-heading_heading2 .ck-button__label {
-	font-size: 1.75em;
-	font-weight: normal;
-	color: hsl( 203, 100%, 50% );
+	font-size: 18px;
+	color: #222;
+	font-family: 'PT Serif', serif;
 }
 
 .ck-heading-dropdown .ck-heading_heading2.ck-on .ck-button__label {
@@ -52,9 +55,9 @@ Preserve the relative scale, though. */
 
 /* Set the styles for "Heading 2". */
 .ck-content h3 {
-	line-height: 1.86em;
-	padding-top: .171em;
-	margin-bottom: .357em;
+	font-size: 18px;
+	color: #222;
+	font-family: 'PT Serif', serif;
 }
 
 /* Set the styles for "Heading 3". */
